@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeFragment">
+
+
+    <ImageView
+        android:id="@+id/iv_clock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/clock_line"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <ImageView
+        android:id="@+id/iv_back_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:layout_marginTop="@dimen/dimen_16dp"
+        android:src="@drawable/arrow_right_circle_line"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_person_image"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginEnd="@dimen/dimen_16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_time_tracker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time Tracker"
+        app:layout_constraintEnd_toStartOf="@+id/iv_person_image"
+        app:layout_constraintStart_toEndOf="@+id/iv_back_arrow"
+        app:layout_constraintTop_toBottomOf="@+id/iv_person_image" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen_8dp"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:text="@string/title"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_tracker" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dimen_16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dimen_16dp" />
+
+    <ImageView
+        android:id="@+id/iv_bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginEnd="@dimen/dimen_8dp"
+        android:src="@drawable/clipboard_check_line"
+        app:layout_constraintEnd_toStartOf="@+id/iv_pen"
+        app:layout_constraintTop_toBottomOf="@+id/tv_time_tracker" />
+
+    <ImageView
+        android:id="@+id/iv_pen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dimen_8dp"
+        android:src="@drawable/edit_pen"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/iv_bookmark" />
+
+    <EditText
+        android:id="@+id/et_text_details"
+        android:layout_width="0dp"
+        android:layout_height="120dp"
+        android:background="@drawable/custom_edittext_bg"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:background="@drawable/custom_edittext_bg"
+        android:padding="@dimen/dimen_8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/et_text_details">
+
+        <ImageView
+            android:id="@+id/iv_more_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:src="@drawable/ic_baseline_more_vert_24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_right_hook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:src="@drawable/icon_arrow_right"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_more_icon"
+            app:layout_constraintEnd_toStartOf="@+id/iv_more_icon"
+            app:layout_constraintTop_toTopOf="@+id/iv_more_icon" />
+
+        <ImageView
+            android:id="@+id/iv_left_hook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimen_8dp"
+            android:src="@drawable/icon_arrow_left"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_right_hook"
+            app:layout_constraintEnd_toStartOf="@+id/iv_right_hook"
+            app:layout_constraintTop_toTopOf="@+id/iv_right_hook" />
+
+        <ImageView
+            android:id="@+id/iv_archive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:src="@drawable/archive_outline_rounded"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_palete_icon"
+            app:layout_constraintStart_toEndOf="@+id/iv_palete_icon"
+            app:layout_constraintTop_toTopOf="@+id/iv_palete_icon" />
+
+        <ImageView
+            android:id="@+id/iv_notif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:src="@drawable/nimbus_notification"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_picture_icon"
+            app:layout_constraintStart_toEndOf="@+id/iv_picture_icon"
+            app:layout_constraintTop_toTopOf="@+id/iv_picture_icon" />
+
+        <ImageView
+            android:id="@+id/iv_picture_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_8dp"
+            android:src="@drawable/icons_image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/iv_palete_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dimen_10dp"
+            android:src="@drawable/color_palette_outline"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_notif"
+            app:layout_constraintStart_toEndOf="@+id/iv_notif"
+            app:layout_constraintTop_toTopOf="@+id/iv_notif" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tv_date_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Jul 26, 2022"
+        app:layout_constraintStart_toEndOf="@+id/iv_clock"
+        app:layout_constraintTop_toTopOf="@+id/iv_clock" />
+
+    <TextView
+        android:id="@+id/tv_time_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="12:00 AM"
+        app:layout_constraintStart_toEndOf="@+id/tv_date_picker"
+        app:layout_constraintTop_toTopOf="@+id/tv_date_picker" />
+
+    <CheckedTextView
+        android:id="@+id/tv_allday_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:drawableLeft="@drawable/icon_check"
+        android:drawablePadding="@dimen/dimen_8dp"
+        android:text="All Day"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/tv_time_picker" />
+
+    <TextView
+        android:id="@+id/tv_doesnt_repeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Does not repeat"
+        app:layout_constraintStart_toStartOf="@+id/tv_date_picker"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date_picker" />
+
+    <ImageView
+        android:id="@+id/iv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/timer_line"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_doesnt_repeat" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_start_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@drawable/custom_textview_bg"
+        android:text="12:00 am"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_timer"
+        app:layout_constraintStart_toEndOf="@+id/iv_timer"
+        app:layout_constraintTop_toTopOf="@+id/iv_timer" />
+
+    <TextView
+        android:id="@+id/tv_dash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="-"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_start_time"
+        app:layout_constraintStart_toEndOf="@+id/tv_start_time"
+        app:layout_constraintTop_toTopOf="@+id/tv_start_time" />
+
+    <TextView
+        android:id="@+id/tv_end_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="1:00 pm"
+        android:background="@drawable/custom_textview_bg"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_dash"
+        app:layout_constraintStart_toEndOf="@+id/tv_dash"
+        app:layout_constraintTop_toTopOf="@+id/tv_dash" />
+
+    <TextView
+        android:id="@+id/tv_countdown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/custom_textview_filled"
+        android:text="1:00:00"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_end_time"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/tv_end_time" />
+
+    <TextView
+        android:id="@+id/tv_task_created"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Task Created"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_start_time" />
+
+    <ImageView
+        android:id="@+id/iv_sort_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/icons_arrow_up_down"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_task_created"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/tv_task_created" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/task_rv"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/tv_task_created" />
+
+    <include
+        android:id="@+id/progress_layout"
+        layout="@layout/progress_layout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@+id/guideline2"
+        app:layout_constraintTop_toBottomOf="@+id/task_rv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
