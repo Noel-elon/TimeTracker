@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.noelon.core_database"
+    namespace = "com.noelon.core_data"
     compileSdk = Config.Versions.compileSdkVersion
 
     defaultConfig {
@@ -37,12 +37,10 @@ android {
 
 dependencies {
     api(project(":core-model"))
-    //Room
-    implementation(AppDependencies.Local.roomRuntime)
-    implementation(AppDependencies.Local.roomKtx)
-    kapt(AppDependencies.Local.roomCompiler)
+    api(project(":core-database"))
 
-    // hilt
-    implementation(AppDependencies.DI.hiltAndroid)
+    api(AppDependencies.Network.coroutinesAndroid)
+
+    api(AppDependencies.DI.hiltAndroid)
     kapt(AppDependencies.DI.hiltCompiler)
 }
