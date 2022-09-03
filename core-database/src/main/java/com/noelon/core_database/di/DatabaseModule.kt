@@ -9,11 +9,13 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class DatabaseModule {
+ object DatabaseModule {
 
     @Provides
     @Singleton
@@ -28,5 +30,12 @@ abstract class DatabaseModule {
     @Singleton
     fun provideAuthDao(trackerDatabase: TrackerDatabase): TrackerDao =
         trackerDatabase.trackerDao()
+
+
+    @Provides
+    @Singleton
+    fun provideCoroutineDispatcher(): CoroutineDispatcher {
+        return Dispatchers.IO
+    }
 
 }

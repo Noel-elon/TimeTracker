@@ -8,6 +8,6 @@ buildscript {
         classpath(AppDependencies.AndroidConfig.androidGradlePlugin)
         classpath(AppDependencies.AndroidConfig.kotlinGradlePlugin)
         classpath(AppDependencies.AndroidConfig.hiltPlugin)
-        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.7.10")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.5.10")
     }
 }

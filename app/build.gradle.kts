@@ -31,13 +31,6 @@ android {
             isMinifyEnabled = BuildTypeRelease.isMinifyEnabled
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
-
-        named(BuildType.DEBUG) {
-            isMinifyEnabled = BuildTypeDebug.isMinifyEnabled
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-            applicationIdSuffix = BuildTypeDebug.applicationIdSuffix
-            versionNameSuffix = BuildTypeDebug.versionNameSuffix
-        }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -49,12 +42,17 @@ android {
 }
 
 dependencies {
-
+    implementation(project(":core-data"))
     implementation(AppDependencies.AndroidX.androidCoreKtx)
     implementation(AppDependencies.AndroidX.appCompat)
     implementation(AppDependencies.AndroidX.materialDesign)
     implementation(AppDependencies.AndroidX.constraintLayout)
+    implementation(AppDependencies.AndroidX.lifecycleKtx)
+    implementation(AppDependencies.AndroidX.lifecycleViewModel)
     implementation(AppDependencies.DI.hiltAndroid)
+    implementation(AppDependencies.AndroidX.navigationFragment)
+    implementation(AppDependencies.AndroidX.navigationUi)
+    implementation(AppDependencies.ExternalLibs.circularImageView)
     kapt(AppDependencies.DI.hiltCompiler)
     testImplementation(AppDependencies.Test.JUnit)
     androidTestImplementation(AppDependencies.AndroidX.androidXTestJUnit)
