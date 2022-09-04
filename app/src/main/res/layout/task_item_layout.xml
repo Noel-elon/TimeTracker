@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/dimen_16dp"
+    android:layout_marginBottom="@dimen/dimen_12dp"
     android:elevation="2dp"
     app:cardCornerRadius="12dp">
 
@@ -19,7 +19,7 @@
             android:id="@+id/btn_edit_pen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="@dimen/dimen_16dp"
             app:layout_constraintBottom_toBottomOf="@+id/btn_delete"
             app:layout_constraintEnd_toStartOf="@+id/btn_delete"
             app:layout_constraintTop_toTopOf="@+id/btn_delete"
@@ -39,7 +39,9 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/icon_check"
             android:drawablePadding="@dimen/dimen_8dp"
-            android:text="All Day"
+            android:text="@string/all_day"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_regular"
             app:layout_constraintEnd_toStartOf="@+id/btn_edit_pen"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

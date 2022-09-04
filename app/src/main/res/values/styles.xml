@@ -18,4 +18,10 @@
         <item name="android:minWidth">1dp</item>
         <item name="android:maxWidth">12dp</item>
     </style>
+
+    <style name="BottomNavigation">
+        <item name="itemIconTint">@color/bottom_nav_tint</item>
+        <item name="itemTextColor">@color/bottom_nav_tint</item>
+        <item name="itemTextAppearance">@font/poppins_regular</item>
+    </style>
 </resources>
