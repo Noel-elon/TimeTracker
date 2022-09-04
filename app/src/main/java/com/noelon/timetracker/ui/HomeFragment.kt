@@ -170,6 +170,7 @@ class HomeFragment : Fragment(), PopupMenu.OnMenuItemClickListener {
             } else {
                 Toast.makeText(requireContext(), "Add a description", Toast.LENGTH_SHORT).show()
             }
+            binding.etTextDetails.text.clear()
         }
     }
 

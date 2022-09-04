@@ -5,6 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.noelon.core_database.entity.TaskEntity
+import kotlinx.coroutines.flow.Flow
 
 @Dao
 interface TrackerDao {
@@ -13,5 +14,5 @@ interface TrackerDao {
     suspend fun saveTaskDetails(task: TaskEntity)
 
     @Query(value = "SELECT * FROM tasks")
-    suspend fun getTasks() : List<TaskEntity>
+     fun getTasks() : Flow<List<TaskEntity>>
 }

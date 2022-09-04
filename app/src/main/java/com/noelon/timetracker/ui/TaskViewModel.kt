@@ -1,6 +1,5 @@
 package com.noelon.timetracker.ui
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.noelon.core_data.dummyTaskList
@@ -9,7 +8,7 @@ import com.noelon.core_model.TaskModel
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -30,13 +29,14 @@ class TaskViewModel @Inject constructor(
 
     }
 
-     fun getTaskDetails() {
+    fun getTaskDetails() {
         viewModelScope.launch {
-            taskRepository.fetchTasks().map {
-                _taskDetails.value = it
-                Log.d("Saved Tasks: ", it.toString())
-            }
+            taskRepository.fetchTasks()
+                .collect {
+                    _taskDetails.value = it
+                }
         }
+
     }
 
     fun saveTaskDetails(taskModel: TaskModel) {

@@ -18,3 +18,12 @@ fun TaskModel.asTaskEntity() =
         description,
         isCompleted
     )
+
+fun List<TaskModel>.asListOfTaskEntity() =
+    this.map {
+        TaskEntity(
+            title = it.title,
+            description = it.description,
+            isCompleted = it.isCompleted
+        )
+    }
