@@ -21,9 +21,9 @@ val dummyTaskList = listOf(
 )
 
 val dummyTime = listOf(
-    "12:00PM",
-    "1:00PM",
-    "2:00PM", "3:00PM", "4:00PM", "5:00PM", "6:00PM",
+    "12:00 PM",
+    "1:00 PM",
+    "2:00 PM", "3:00 PM", "4:00 PM", "5:00 PM", "6:00 PM",
 
     )
 

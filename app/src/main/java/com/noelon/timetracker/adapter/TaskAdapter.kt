@@ -10,11 +10,11 @@ import com.noelon.core_model.TaskModel
 import com.noelon.timetracker.R
 import com.noelon.timetracker.databinding.TaskItemLayoutBinding
 
-class TaskAdapter() : ListAdapter<TaskModel, TaskAdapter.TaskViewHolder>(TaskDiffUtil()) {
+class TaskAdapter : ListAdapter<TaskModel, TaskAdapter.TaskViewHolder>(TaskDiffUtil()) {
 
     inner class TaskViewHolder(private val binding: TaskItemLayoutBinding) :
         RecyclerView.ViewHolder(binding.root) {
-        val colours = listOf(
+        private val colours = listOf(
             ContextCompat.getColor(binding.root.context, R.color.grey),
             ContextCompat.getColor(binding.root.context, R.color.orange),
             ContextCompat.getColor(binding.root.context, R.color.purpleish)
