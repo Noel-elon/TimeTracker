@@ -1,5 +1,6 @@
-package com.noelon.timetracker
+package com.noelon.timetracker.ui
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.noelon.core_data.dummyTaskList
@@ -24,15 +25,16 @@ class TaskViewModel @Inject constructor(
 
         dummyTaskList.forEach {
             saveTaskDetails(it)
+            getTaskDetails()
         }
 
-        getTaskDetails()
     }
 
-    private fun getTaskDetails() {
+     fun getTaskDetails() {
         viewModelScope.launch {
             taskRepository.fetchTasks().map {
                 _taskDetails.value = it
+                Log.d("Saved Tasks: ", it.toString())
             }
         }
     }

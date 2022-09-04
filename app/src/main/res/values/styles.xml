@@ -24,4 +24,11 @@
         <item name="itemTextColor">@color/bottom_nav_tint</item>
         <item name="itemTextAppearance">@font/poppins_regular</item>
     </style>
+
+    <style name="PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@color/blueish</item>
+        <item name="popupMenuBackground">@color/white</item>
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
 </resources>
