@@ -9,4 +9,6 @@
     <dimen name="dimen_80dp">80dp</dimen>
     <dimen name="dimen_8sp">8sp</dimen>
     <dimen name="dimen_12dp">12dp</dimen>
+    <dimen name="dimen_45dp">45dp</dimen>
+    <dimen name="dimen_2dp">2dp</dimen>
 </resources>

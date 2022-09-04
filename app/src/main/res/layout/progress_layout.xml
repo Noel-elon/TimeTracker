@@ -28,7 +28,7 @@
             android:textSize="@dimen/dimen_8sp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="4dp"
-            android:text="Task 1" />
+            android:text="@string/task_1" />
 
     </LinearLayout>
 
@@ -56,7 +56,7 @@
             android:textColor="@color/blueish"
             android:textSize="@dimen/dimen_8sp"
             android:layout_marginTop="4dp"
-            android:text="Task 2" />
+            android:text="@string/task_2" />
 
     </LinearLayout>
 
@@ -100,7 +100,7 @@
             android:layout_width="@dimen/dimen_10dp"
             android:layout_height="@dimen/dimen_80dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
             android:progress="20"
             android:progressTint="#FDE1B8" />
 
@@ -112,7 +112,7 @@
             android:textColor="@color/blueish"
             android:textSize="@dimen/dimen_8sp"
             android:layout_marginTop="4dp"
-            android:text="Task 4" />
+            android:text="@string/task_4" />
 
     </LinearLayout>
 
@@ -128,7 +128,7 @@
             android:layout_width="@dimen/dimen_10dp"
             android:layout_height="@dimen/dimen_80dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
             android:progress="60"
             android:progressTint="#5398FF" />
 
@@ -140,7 +140,7 @@
             android:textColor="@color/blueish"
             android:textSize="@dimen/dimen_8sp"
             android:layout_marginTop="4dp"
-            android:text="Task 5" />
+            android:text="@string/task_5" />
 
     </LinearLayout>
 
@@ -156,7 +156,7 @@
             android:layout_width="@dimen/dimen_10dp"
             android:layout_height="@dimen/dimen_80dp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="@dimen/dimen_8dp"
             android:progress="40"
             android:progressTint="#52BB69" />
 
@@ -168,7 +168,7 @@
             android:textColor="@color/blueish"
             android:textSize="@dimen/dimen_8sp"
             android:layout_marginTop="4dp"
-            android:text="Task 6" />
+            android:text="@string/task_6" />
 
     </LinearLayout>
 

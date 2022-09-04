@@ -1,7 +1,6 @@
 package com.noelon.core_data.repository
 
 import com.noelon.core_data.mapper.asListOfTaskModel
-import com.noelon.core_data.mapper.asTaskModel
 import com.noelon.core_database.dao.TrackerDao
 import com.noelon.core_database.entity.asTaskEntity
 import com.noelon.core_model.TaskModel

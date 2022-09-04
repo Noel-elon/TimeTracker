@@ -15,4 +15,10 @@
     <string name="does_not_repeat">Does not repeat</string>
     <string name="_1_00_pm">1:00 PM</string>
     <string name="task_created">Task Created</string>
+    <string name="_1_00_00">1:00:00</string>
+    <string name="task_1">Task 1</string>
+    <string name="task_2">Task 2</string>
+    <string name="task_4">Task 4</string>
+    <string name="task_5">Task 5</string>
+    <string name="task_6">Task 6</string>
 </resources>
