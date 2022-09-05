@@ -19,7 +19,7 @@ import javax.inject.Singleton
 
     @Provides
     @Singleton
-    fun provideDegExDatabase(@ApplicationContext context: Context): TrackerDatabase =
+    fun provideTrackerDatabase(@ApplicationContext context: Context): TrackerDatabase =
         Room.databaseBuilder(
             context.applicationContext,
             TrackerDatabase::class.java,
@@ -28,7 +28,7 @@ import javax.inject.Singleton
 
     @Provides
     @Singleton
-    fun provideAuthDao(trackerDatabase: TrackerDatabase): TrackerDao =
+    fun provideTrackerDao(trackerDatabase: TrackerDatabase): TrackerDao =
         trackerDatabase.trackerDao()
 
 
